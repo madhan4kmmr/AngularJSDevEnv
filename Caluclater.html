@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html ng-app="calculatorApp">
+<head>
+	<style>		.section{clear:both;padding:0;margin:0}
+	            .col{background-color:#f4f4f4;height:20px;text-align:center;display:block;float:left;margin:1% 0 1% 1.6%}
+	            .col:first-child{margin-left:0}
+	            .col:hover{background-color:#f0f0ff}
+	            .group:before,.group:after{content:"";display:table}
+	            .group:after{clear:both}
+	            .c3of4{width:74.6%}
+	            .c1of4{width:23.8%}
+	            
+	            .calcstyle{
+					background-color:#DDFFDD;
+					height:265px;
+					width:280px;
+					border:2px solid #000000;
+	            }
+	            
+	            
+	            /* enable absolute positioning */
+				.inner-addon { 
+				    position: relative;
+				    float:left; 
+				    padding: 2px;
+				}
+				
+				/* style icon */
+				.inner-addon .glyphicon {
+				  position: absolute;
+				  padding: 10px;
+				  pointer-events: none;
+				}
+				
+				/* align icon */
+				.left-addon .glyphicon  { left:  0px;}
+				
+				/* add padding  */
+				.left-addon input  { padding-left:  30px; width:270px; }
+				.Cbutton{
+					float:left; 
+				    padding: 2px;
+				}
+				.Mbutton{
+					float:left; 
+				    padding: 4px;
+				}
+				
+				.Bbutton{
+					float:left; 
+				    padding: 4px;
+				    height:35px;
+			}
+				.sizesync{
+					width:47px;
+				}
+				
+				.sizesyncBig{
+					width:102px;
+				}
+
+	</style>
+	
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  
+  
+</head>
+<body>
+
+
+
+
+	<div class="calcstyle" ng-controller="calculatorController">
+			<div class="inner-addon left-addon">
+			    <i class="glyphicon glyphicon-th"></i>
+			    <input type="text" class="form-control" name="calculator.resultDisplay" ng-model="calculator.resultDisplay"/>
+			</div>
+					
+			<div class="Mbutton"><button ng-click="setNumber(1)" type="button" class="btn-lg btn-primary sizesync">1</button></div>
+			<div class="Mbutton"><button ng-click="setNumber(2)" type="button" class="btn-lg btn-primary sizesync">2</button></div>
+			<div class="Mbutton"><button ng-click="setNumber(3)" type="button" class="btn-lg btn-primary sizesync">3</button></div>
+			<div class="Mbutton"><button ng-click="resetBox(0)" type="button" class="btn-lg btn-danger sizesync">C</button></div>
+			<div class="Bbutton"><button ng-click="reSetBack()" type="button" class="btn-lg btn-warning sizesync" ng-disabled="true"><i class="glyphicon glyphicon-arrow-left"></i></button></div>
+			<div style=" clear: both;"></div>
+			<div class="Mbutton"><button ng-click="setNumber(4)" type="button" class="btn-lg btn-primary sizesync">4</button></div>
+			<div class="Mbutton"><button ng-click="setNumber(5)" type="button" class="btn-lg btn-primary sizesync">5</button></div>
+			<div class="Mbutton"><button ng-click="setNumber(6)" type="button" class="btn-lg btn-primary sizesync">6</button></div>
+			<div class="Mbutton"><button ng-click="dosetOperation('+')" type="button" class="btn-lg btn-primary sizesyncBig">+</button></div>
+			<div class="Mbutton"><button ng-click="setNumber(7)" type="button" class="btn-lg btn-primary sizesync">7</button></div>
+			<div class="Mbutton"><button ng-click="setNumber(8)" type="button" class="btn-lg btn-primary sizesync">8</button></div>
+			<div class="Mbutton"><button ng-click="setNumber(9)" type="button" class="btn-lg btn-primary sizesync">9</button></div>
+			<div class="Mbutton" ><button ng-click="dosetOperation('-')"  type="button" class="btn-lg btn-primary sizesyncBig">-</button></div>
+						
+			<div class="Mbutton" ><button ng-click="dosetOperation('/')" type="button" class="btn-lg btn-primary sizesync">/</button></div>
+			<div class="Mbutton"><button ng-click="setNumber(0)" type="button" class="btn-lg btn-primary sizesync">0</button></div>
+			<div class="Mbutton"><button ng-click="dosetOperation('*')" type="button" class="btn-lg btn-primary sizesync">*</button></div>
+			<div class="Mbutton"><button ng-click="doOperation()" type="button" class="btn-lg btn-success sizesyncBig">=</button></div>
+			
+			
+   </div>
+		
+	
+    
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+
+    <script type="text/javascript">
+    
+		// Model declaration
+		calcModel = {
+			resultDisplay: "", 
+			result: 0, 
+			operation: "",
+			currentNumber: "0",
+			moperation: 0,
+			suboperation: 0,
+			moperation: 0,
+			boperation :0,
+			
+			reset: function() {
+				this.result = 0; 
+				this.operation = "";
+				this.currentNumber = "0";
+				this.resultDisplay = "" ;
+				this.moperation = 0;
+				this.suboperation =0;
+				this.boperation =0;
+			},
+			resetall: function() {
+				this.result = 0; 
+				this.operation = "";
+				this.currentNumber = "0";
+				this.moperation = 0;
+				this.suboperation =0;
+				this.boperation =0;
+			},
+			
+			setOperation: function(operationToSet) {
+				this.operation = operationToSet;
+				if(calcModel.currentNumber === "0") {
+					this.resultDisplay += "0";
+				}
+				
+				this.resultDisplay += " " + this.operation + " ";
+				this.calculate();
+				
+				this.currentNumber = "";
+			},
+
+			calculate: function() {
+
+				switch(this.operation) {
+					case "+":
+						this.result = this.result + parseFloat(this.currentNumber);
+						break;
+						
+					case "-":
+						
+						if(this.suboperation == 0)
+						{
+						this.result = this.currentNumber;
+						
+						this.suboperation =1;							
+						}else
+							{
+							this.result = this.result - this.currentNumber;
+							}
+						
+						break;
+						
+					case "*":
+						
+						if(this.moperation == 0)
+							{
+							this.result = 1;
+							this.moperation =1;							
+							}
+
+								
+						if(this.currentNumber == 0)
+							this.result = 0;
+						else
+							this.result = this.result * this.currentNumber;
+						
+
+						break;
+
+
+					case "/":
+						
+						if(this.boperation == 0)
+						{
+							this.result =  this.currentNumber;
+							this.boperation =1;							
+						}else
+							{
+								
+								if(this.currentNumber == 0)
+									this.result = 0;
+								else
+									this.result = this.result / this.currentNumber;
+							}
+
+						
+					break;
+						
+				}
+			}			
+			
+		};
+		
+        // declare the calculator-module
+        var calculatorApp = angular.module('calculatorApp', ['calculatorModule']);
+        var calculatorModule = angular.module('calculatorModule', []);
+
+        // Add the calculator-controller to module
+        calculatorModule.controller('calculatorController', ['$scope', function ($scope) {
+            $scope.calculator = calcModel;
+			$scope.setNumber = function(clickedNumber) {
+				if(calcModel.currentNumber === "0") {
+					calcModel.currentNumber = "";
+					calcModel.resultDisplay = "";
+				}
+				
+				calcModel.currentNumber += clickedNumber;
+				calcModel.resultDisplay += clickedNumber;
+			};
+			
+			$scope.dosetOperation = function(clickedOperation) {
+
+				if(calcModel.currentNumber === "0") {
+					calcModel.currentNumber = "0";
+					calcModel.resultDisplay = "";
+				}
+				
+				calcModel.setOperation(clickedOperation);				
+			};
+			
+			$scope.doOperation = function() {
+				calcModel.calculate();
+				calcModel.resultDisplay = calcModel.result;
+				calcModel.resetall();
+				
+				
+			};
+			
+			$scope.resetBox = function() {
+				calcModel.reset();
+			};
+        }]);
+    </script>
+	
+	
+</body>
+</html>
