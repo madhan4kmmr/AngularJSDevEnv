@@ -1,0 +1,32 @@
+{
+	"Rooms" :[
+
+
+                    {
+                         "id": "12038923", 
+                         "title": "Garage available plus Beautiful Furnished Room and Private bath", 
+                         "address": "1234 Anywhere St.", 
+                         "city": "Phoenix",
+                         "country":"AU",
+                         "phone":"555-3334-323",
+                         "roomType":"Shared Room",
+                         "avldate":"12/OCT/2015",
+                         "noofrooms":"Single Room",
+                         "cost":"500.98",
+                         "description": "Looking to rent a very nice room to a professional in a beautiful home. Only minutes to anywhere, 10 minutes to Providence hospital, 10 min to downtown, 10 min to airport. The home has a very safe and quiet setting. The kitchen is a chefs delight.There are never any loud parties.This is the perfect setting for someone like YOU. Very nice, larger than average 14ftX16ft furnished room, Queen size bed, Dresser, nightstand and enough extra room for your own office desk and PC"
+                     },
+					 {
+                         "id": "12038923", 
+                         "title": "Garage available plus Beautiful Furnished Room and Private bath", 
+                         "address": "1234 Anywhere St.", 
+                         "city": "Hyderabad",
+                         "country":"US",
+                         "phone":"3453-567",
+                         "roomType":"Single Room",
+                         "avldate":"12/OCT/2015",
+                         "noofrooms":"4 Rooms",
+                         "cost":"500.98",
+                         "description": "Looking to rent a very nice room to a professional in a beautiful home. Only minutes to anywhere, 10 minutes to Providence hospital, 10 min to downtown, 10 min to airport. The home has a very safe and quiet setting. The kitchen is a chefs delight.There are never any loud parties.This is the perfect setting for someone like YOU. Very nice, larger than average 14ftX16ft furnished room, Queen size bed, Dresser, nightstand and enough extra room for your own office desk and PC"
+                     }
+		]
+}
