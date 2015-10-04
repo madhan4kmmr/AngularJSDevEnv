@@ -1,0 +1,387 @@
+body {
+    padding: 65px;
+    font-family: "Open Sans",Arial,sans-serif;
+}
+
+.view {
+    left: 60px;
+    position: relative;
+    opacity: 0.0;
+}
+
+
+
+/* Bootstrap overrides - START*/
+.navbar-inner {
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.navbar .nav {
+    margin-left:50px;
+    margin-top:15px;
+}
+
+.close {
+    opacity: 1.0;
+}
+
+.container
+{
+	background-color: #FFFFFF;
+}
+
+.navbar-fixed-bottom{
+	background-color: #114B5A;
+}
+
+/* Bootstrap overrides - END */
+
+
+.lastRow {
+    background-color: #ccc;
+}
+
+.indent {
+    margin-left:20px;
+}
+
+.ordersTable {
+    width:800px;
+    margin-left:20px;
+}
+
+.orders th, .customerOrders th {
+    width:25%;
+    cursor: pointer;
+}
+
+.ordersTable tr:first-child th {
+    background-color: #006dcc;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+#submitCustomer {
+    margin-left:50px;
+    margin-top: -8px;
+}
+
+footer {
+    margin-top:10px;
+    font-weight: bold;
+}
+
+
+
+.close {
+    opacity: 1.0;
+}
+
+.navTabs{
+  background: -webkit-linear-gradient(#F2F6F9, #D0D8E1); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#F2F6F9, #D0D8E1); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#F2F6F9, #D0D8E1); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#F2F6F9, #D0D8E1); /* Standard syntax */
+  padding:3px;
+  height:54px;
+}
+
+.navmenuItem{
+	float:left;
+	width:175px;
+}
+
+
+
+.haveRoom{
+	 margin-top: 105px;
+	 margin-left:-28px;
+}
+.needRoom{
+	 margin-top: 105px;
+	 margin-left:-28px; 
+}
+.admin{
+	margin-top: 105px;
+	margin-left:-28px; 
+}
+
+
+.smalltext{
+	font-size:10pt;
+    color:#1A4D5E;
+    font-weight: bold;
+}
+.headTxt{
+	font-size:17pt;
+    color:#1A4D5E;
+    font-weight: bold;
+}
+
+[class*="formrow"] {
+    float: left;
+    margin-left: 15px;
+    min-height: 1px;
+}
+
+.formhead{
+	margin-top:3px;
+	margin-bottom: 3px;
+}
+.formrow{
+	min-width:900px;
+	width:96%;
+}
+
+.smallformarea{
+	padding:3px;
+}
+
+.inputall
+{
+	width:100%;
+}
+
+.smallformarea .inputall
+{
+	width:90%;
+}
+
+.smallformarea .inputdropdown
+{
+	width:96%;
+}
+
+.alignleft{
+	text-align: left;
+}
+
+.btnresize{
+					width:280px;
+				}
+				
+.btnresizeToicon{
+					width:100px;
+				}
+.adHeader {
+    background-color: #489CDF;
+    font-size:10pt;
+    font-weight: bold;
+    color:white;
+    padding:5px;
+}
+
+.adwordAddressinfo{
+	
+	font-size:9pt;
+    font-weight: bold;
+    color:#8D8E8E;
+    padding:15px;
+}
+
+.adwordAddressinfo .address{
+	float:left;
+	width:20%;
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+	display:inline-block;
+}	
+
+.adwordAddressinfo .city{
+	float:left;
+	width:20%;
+	}
+
+.adwordAddressinfo .country{
+	float:left;
+	width:20%;
+
+	}
+.roomCost{
+	float:right;
+	width:25%;
+	font-size:8pt;
+}
+
+.estCost{
+	font-size:15pt;
+	color:#F78B24;
+}
+
+
+.adWords {
+	width:70%;
+	font-size:10pt;
+    color:#1E4554;
+    overflow: hidden;
+    height : 72px;
+    line-height: 25px;
+    margin-bottom: 5px;
+    float:left;
+}
+.adWords:before {
+    content: "";
+    float: left;
+    width: 5px;
+    height : 75px;
+}
+.adWords > *:first-child {
+    float: right;
+    width: 100%;
+    margin-left: -5px;
+}
+.adWords:after {
+    content: "\02026\02026";
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    float: right;
+    position: relative;
+    top: -25px;
+    left: 100%;
+    width: 3em;
+    margin-left: -3em;
+    padding-right: 5px;
+    text-align: right;
+    background-size: 100% 100%;
+     }
+
+
+.roomdetails{
+	font-size:8pt;
+	padding:5px;
+    font-weight: bold;
+    color:#000000;
+    float : left;
+	width: 29%;
+	height : 72px;
+}
+
+.tabButton{
+	font-size:10pt;
+	font-family: Verdana,sans-serif;
+	padding:5px;
+    font-weight: bold;
+    margin-top:20px;
+}
+
+.footer{
+	margin-left:120px;
+}
+
+
+ /* enable absolute positioning */
+.inner-addon { 
+    position: relative;
+    float:left; 
+    padding: 2px;
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* add padding  */
+.inner-addon input  { padding-left:  30px; }
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; width:250px; }
+
+
+/* align icon */
+.form-addon .glyphicon  { left:  0px;}
+
+.input-group-addon{
+    vertical-align:top;
+}
+
+
+.maxinput input  { width:1080px; }
+
+.mediuminput { left:  -2px; }
+.mediuminput input  { width:496px; }
+.mediuminput select  { padding-left:  30px; width:496px; }
+.mediuminput option  { padding-left:  30px;  }
+
+
+.medium-innerinput input  { width:282px; }
+.medium-innerinput select  { padding-left:  30px; width:282px; }
+.medium-innerinput option  { padding-left:  30px;  }
+
+
+.form-addon-left { float:left; width: 500px; padding:2px;}
+.form-addon-right {float: right; width:580px;padding:2px;}
+
+.form-addon-inner-left { float:left; width: 285px; padding:2px;}
+.form-addon-inner-right {float: right; width:285px;padding:2px;}
+
+.form-addon-resize{
+	width:496px;
+	height:35px;
+	text-align: left;
+	margin-left:40px;
+	padding: 5px 7px;
+	color:#999999;
+}
+				
+				
+/*  custom code for ngdialog 
+ background-image: linear-gradient(-45deg, #D6D9DB 25%, transparent 25%, transparent 50%, #D6D9DB 50%, #D6D9DB 75%, transparent 75%, transparent);
+*/
+
+.sripback {
+    background-image: linear-gradient(-45deg, #E0E3E5 25%, transparent 25%, transparent 50%, #E0E3E5 50%, #E0E3E5 75%, transparent 75%, transparent);
+    
+    background-size: 4px 4px;
+}
+
+.windowRoomheader{
+	font-size:14pt;
+	padding:5px;
+    font-weight: bold;
+    color:#489CDF;
+}
+.windowtitle
+{
+	font-size:11pt;
+	padding:5px;
+    font-weight: bold;
+    color:#DB8813;
+    
+}	
+
+.windowdiscription
+{
+	font-size:10pt;
+	padding:5px;
+    font-weight: bold;
+    color:#000000;
+}
+
+
+  
+  
+.windowRoominfo{
+	width:100%;
+    height:100%;
+}
+.windowtable
+{
+	margin: 0 auto;
+	font-size:9pt;
+	padding:5px;
+    font-weight: bold;
+    color:#000000;
+    width:400px;
+}		
+				
+				

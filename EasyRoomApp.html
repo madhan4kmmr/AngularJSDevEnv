@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html data-ng-app="easyroomApp">
+<head>
+    <title>Easy Room - house share . ... Need a room? Where are you looking? </title>
+    
+    <link rel="stylesheet" href="Content/bootstrap.min.css">
+    <link href="Content/easyRoomappStyles.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="Content/ngDialog.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="Content/ngDialog-theme-default.css">
+    <link rel="stylesheet" href="Content/ngDialog-custom-width.css">
+    
+</head>
+<body>
+
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand " href="#/">
+                    <img src="Content/images/easyroomlogo.png" alt="logo">
+                </a>
+                
+                <div class="navTabs">
+                		<div class="navmenuItem"><a href="#/needRoom"><button data-ng-class="{'active':getClass('/needRoom')}"  type="button" class="btn-lg btn-warning"><i class="glyphicon glyphicon-home"></i> <span class="tabButton">I need a room</span></button></a></div>
+	                    <div class="navmenuItem"><a href="#/haveRoom"><button data-ng-class="{'active':getClass('/haveRoom')}"  type="button" class="btn-lg btn-primary"><i class="glyphicon glyphicon-tree-conifer"></i> <span class="tabButton">I have a room</span></button></a></div>
+	                    <div class="navmenuItem"><a href="#/admin"><button data-ng-class="{'btn-warning': started, 'btn-danger': !started}"   type="button" class="btn-lg btn-warning"><i class="glyphicon glyphicon-user"></i> <span class="tabButton">Admin</span></button></a></div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Note that AngularJS 1.1.4 now has a built-in ng-animation direction. Left in animated-view to show a custom directive -->
+    <div data-animated-view></div>
+
+
+    <div id="footer">
+        <div class="navbar navbar-fixed-bottom">
+        		<div class="navTabs">
+        		 <div class="footer">
+        		 		<footer>
+                                Created by K Madhan Mohan
+                          </footer>
+        		 </div>
+                          
+                </div>
+        </div>
+    </div>
+
+  
+
+    
+      
+  <script src="Scripts/angular.js"></script>
+  <script src="Scripts/ngDialog.js"></script>
+  
+  <!-- jQuery only used for Bootstrap functionality -->  
+  <script src="Scripts/jquery-1.11.3.js"></script>
+  <script src="Scripts/bootstrap.min.js"></script>
+  
+
+    <!-- App libs -->
+    <script src="app/app.js"></script>
+    <script src="app/controllers/controllers.js"></script>
+    <script src="app/services/easyroomServices.js"></script>
+    <script src="app/directives/animatedView.js"></script>
+    
+    
+    
+    
+    
+</body>
+</html>

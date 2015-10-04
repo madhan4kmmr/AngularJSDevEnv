@@ -1,0 +1,89 @@
+<div class="needRoom view">
+    <div class="container">
+        
+       
+	<table class="table table-striped table-bordered table-condensed table-hover">
+	<tr>
+		 <td>Search By</td>
+		 <td>
+			<div class="inner-addon left-addon">
+			    <i class="glyphicon glyphicon-th"></i>
+			    <input type="text" class="form-control searchInput" placeholder="By Address" data-ng-model="search.address"/>
+			</div>
+		 </td>
+		 <td>
+			<div class="inner-addon left-addon">
+			    <i class="glyphicon glyphicon-th"></i>
+			    <input type="text" class="form-control" placeholder="By City" data-ng-model="search.city"/>
+			</div>
+		</td>
+		 <td>
+			<div class="inner-addon left-addon">
+			    <i class="glyphicon glyphicon-th"></i>
+			    <input type="text" class="form-control" placeholder="By Room type" data-ng-model="search.roomType"/>
+			</div>
+		</td>
+		 <td>
+			<div class="inner-addon left-addon">
+			    <i class="glyphicon glyphicon-th"></i>
+			    <input type="text" class="form-control" placeholder="By Available"  data-ng-model="search.avldate"/>
+			</div>
+		</td>
+	</tr>
+	</table>
+ 
+ 	<header>
+            <h4>Customersffff</h4>
+    </header>
+    
+    
+   
+        
+    <table class="table table-striped table-bordered table-condensed table-hover">
+    
+    
+	   
+  
+   		<tr data-ng-repeat="shareRoom in sharingRooms | filter:{city: search.city, roomType: search.roomType, avldate: search.avldate, address: search.address}">
+    	<td width="10%">
+	    	<div><img src="Content/images/shareroom.png" class="img-thumbnail" alt="shareroom" width="100" height="100"></div>
+	    	<div><button type="submit" class="btn btn-success btnresizeToicon" data-ng-click="openRoomInformation('{{shareRoom.id}}')"><i class="glyphicon glyphicon-knight"></i>&nbsp;View Info</button></div>
+		</td>
+    	<td>
+    	  	<div>
+    		<div class="adHeader">{{shareRoom.title}}</div>
+    		
+    		
+    		
+    		<div class="adWords">
+			    <div>
+			        <p>{{shareRoom.description}}</p>
+			    </div>
+			</div>
+    		
+    		<div class="roomdetails">
+    			<table class="table table-striped table-bordered table-condensed table-hover">
+    				<tr class="success"><td><div>Total Rooms:</div></td><td><span>{{shareRoom.noofrooms}}</span></td></tr>
+    				<tr class="warning"><td><div>Room Type:</div></td><td><span>{{shareRoom.roomType}}</span></td></tr>
+    				<tr class="info"><td><div>Available From:</div></td><td><span>{{shareRoom.avldate}}</span></td></tr>
+    			</table>
+			</div>
+    		
+    		<div style="clear:both"></div>
+    		<div class="adwordAddressinfo">
+    			<div class="country"> Country: <span>{{shareRoom.country}}</span></div>
+    			<div class="city"> City: <span>{{shareRoom.city}}</span></div>
+    			<div class="address"> Address: <span id="firstText">{{shareRoom.address}}</span></div>
+    			<div class="roomCost"> <span class="estCost">{{shareRoom.cost | currency}}</span> :: Est.Cost.per week ($)</div>
+    		</div>
+    	</div>
+    	
+    	
+    	
+    	</td>
+
+  	</tr>
+  	
+</table>
+    </div>
+</div>

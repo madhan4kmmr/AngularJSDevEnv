@@ -1,0 +1,54 @@
+[
+    {
+        "id": "1923422",
+        "title": "Garage available plus Beautiful Furnished Room and Private bath",
+        "address": "1234 Hallow St.",
+        "city": "winchester",
+        "country": "AU",
+        "phone": "555-3334-323",
+        "roomType": "Shared Room",
+        "avldate": "12/OCT/2015",
+        "noofrooms": "Shared Room",
+        "cost": "500.98",
+        "description": "Looking to rent a very nice room to a professional in a beautiful home. Only minutes to anywhere, 10 minutes to Providence hospital, 10 min to downtown, 10 min to airport. The home has a very safe and quiet setting. The kitchen is a chefs delight.There are never any loud parties.This is the perfect setting for someone like YOU. Very nice, larger than average 14ftX16ft furnished room, Queen size bed, Dresser, nightstand and enough extra room for your own office desk and PC"
+    },
+    {
+        "id": "12038923",
+        "title": "$750 Bedroom avail in 2 Bedroom Apt (annapolis)",
+        "address": "1234 James St.",
+        "city": "annapolis",
+        "country": "US",
+        "phone": "3453-567",
+        "roomType": "Single Room",
+        "avldate": "19/NOV/2015",
+        "noofrooms": "2 Rooms",
+        "cost": "750",
+        "description": "Professional female has one bedroom available in two bedroom apartment.This sunny, unfurnished bedroom has a large closet, hardwood floors. Measurements are approx 8x10 (can just fit a queen size bed). The fully furnished apartment is sunny, has an eat in kitchen, pantry and storage in the basement.Convenient to the MA Pike, on the 57 bus to Watertown or Kenmore Square, 10 minute walk to the B-line (green), off street parking. "
+    },
+    {
+        "id": "57848",
+        "title": "$700 Nice BR in a cute apartment with Normal People, 5Mins Walk to Metro (EAST BOSTON)",
+        "address": "1234 Anywhere St.",
+        "city": "Brighton",
+        "country": "US",
+        "phone": "54634435643",
+        "roomType": "Single Room",
+        "avldate": "30/OCT/2015",
+        "noofrooms": "2 Rooms",
+        "cost": "700",
+        "description": "My name is (Ameer), I'm an (30) year old (male) .I have lived here for five years and never had any issues, grad student (information system security) at (NEU) and I work part time. I'm neither a clean freak nor a slob and while my room may alternate between whirlwind and organized, I totally respect the common areas and keep them fairly neat.My roommate she is a young professional in her early 20s, she works and go to school too. I'd also be happy to put you in touch with my current roommates if you'd like to."
+    },
+    {
+        "id": "58345345",
+        "title": "$550 Roommates Needed/ Renovated 4 Bedroom in Somerville (boston)",
+        "address": "1234 River St.",
+        "city": "boston",
+        "country": "US",
+        "phone": "96784545",
+        "roomType": "Double Room",
+        "avldate": "16/DEC/2015",
+        "noofrooms": "2 Rooms",
+        "cost": "550",
+        "description": "The apartment is on Sydney St and is a 12 min walk to the Assembly Row T-stop(OrangeLine).Because it is being renovated pics were a bit hard to get but it will be finished and ready for a 10/5movein. $550 a piece without heat.Theleasewillgountil8/31.Please, no pets or couples.We are having an openhouse on Mondayat6: 00pm."
+    }
+]

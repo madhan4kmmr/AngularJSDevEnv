@@ -1,0 +1,119 @@
+
+
+	    <script type="text/ng-template" id="error-messages">
+  			<div data-ng-message="required">This field is mandatory</div>
+  			<div data-ng-message="minlength">Minimum length condition not met</div>
+  			<div data-ng-message="email">Please enter a valid email address</div>
+	   </script>
+<div class="haveRoom view">
+    <div class="container">
+ 		<form class="well span8" name="roomEntryForm" data-ng-submit="submitRoomInformation()" >
+			<div class="formhead"> <span><span class="headTxt">List Your Room Space...</span><span class="smalltext">Lets share and renting out your place. </span></span></div>
+  	  		<div class="row">
+		  
+		  		
+		  
+		  		<div class="formrow">
+		  			<div class="inner-addon form-addon maxinput">
+					    <i class="glyphicon glyphicon-asterisk"></i>
+					    <input type="text" class="form-control inputall" placeholder="Title to display" 
+					    name="title" id="title" 
+					    data-ng-model="roomInfo.title"
+					    data-ng-minlength="3" 
+				        data-ng-maxlength="8"
+				        required />
+					</div>
+					
+				        
+					<div class="error-container" data-ng-show="roomEntryForm.title.$dirty && roomEntryForm.title.$invalid">
+						<small class="error" data-ng-show="roomEntryForm.title.$error.required">Please input a title</small>
+					    <small class="error" data-ng-show="roomEntryForm.title.$error.minlength">Your title is required to be at least 3 characters</small>
+					    <small class="error" data-ng-show="roomEntryForm.title.$error.maxlength">Your title cannot be longer than 20 characters</small>
+					    <small class="error" data-ng-show="roomEntryForm.title.$error.unique">That title is taken, please try another</small>
+					</div>
+					
+					
+					
+					<div class="form-addon-left">
+						<div class="input-group">
+							    <div class="input-group-addon"><span class="glyphicon glyphicon-home"></span></div>
+							    <textarea class="form-control" rows="3" placeholder="Address" name="address" id="address" data-ng-model="roomInfo.address"></textarea>
+						</div> 
+						<div class="inner-addon form-addon mediuminput">
+						    <i class="glyphicon glyphicon-map-marker"></i>
+					            <select class="form-control inputall" name="city" id="city" data-ng-model="roomInfo.city">
+					              <option value="" selected="selected"> Select City</option> 
+					              <option data-ng-repeat="city in chooseCities" value="{{city}}">{{city}}</option>
+					            </select> 
+						</div>
+					   	<div class="inner-addon form-addon mediuminput">
+						    <i class="glyphicon glyphicon-globe"></i>
+						    <input type="text" class="form-control inputall" placeholder="Country" name="country" id="country" data-ng-model="roomInfo.country"/>
+						</div>	
+						
+						<div class="inner-addon form-addon mediuminput">
+						    <i class="glyphicon glyphicon-phone"></i>
+						    <input type="text" class="form-control inputall" placeholder="Contact Number" name="phone" id="phone" data-ng-model="roomInfo.phone"/>
+						</div>	
+					</div>
+					
+					<div class="form-addon-right">
+						<div class="input-group">
+							    <div class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></div>
+							    <textarea class="form-control" rows="3" placeholder="Discription of House / Room" name="description" id="description" data-ng-model="roomInfo.description"></textarea>
+						</div>
+						
+						<div>
+						   	<div class="form-addon-inner-left">
+						   		<div class="inner-addon form-addon medium-innerinput">
+								    <i class="glyphicon glyphicon-th"></i>
+							            <select class="form-control inputall" name="roomType" id="roomType" data-ng-model="roomInfo.roomType">
+							              <option value=""> Select Room Type</option> 
+							             <option data-ng-repeat="typeofRoom in roomTypes" value="{{typeofRoom}}">{{typeofRoom}}</option>
+							            </select> 
+								</div>
+								
+								<div class="inner-addon form-addon medium-innerinput">
+								    <i class="glyphicon glyphicon-calendar"></i>
+								    <input type="text" class="form-control inputall" placeholder="Available from date : dd/mm/yyyy" name="avldate" id="avldate" data-ng-model="roomInfo.avldate"/>
+								</div>
+								<div class="smallformarea"><button type="submit" class="btn btn-success btnresize"><i class="glyphicon glyphicon-ok"></i>&nbsp;&nbsp;Send</button></div>
+							</div>
+							<div class="form-addon-inner-left">
+							
+								<div class="inner-addon form-addon medium-innerinput">
+								    <i class="glyphicon glyphicon-th-list"></i>
+							            <select class="form-control inputall" name="noofrooms" id="noofrooms" data-ng-model="roomInfo.noofrooms">
+							              <option value=""> Select Rooms</option> 
+							              <option data-ng-repeat="troom in totalRooms" value="{{troom}}">{{troom}}</option>
+							            </select> 
+								</div>
+								
+								<div class="inner-addon form-addon medium-innerinput">
+								    <i class="glyphicon glyphicon-usd"></i>
+								    <input type="text" class="form-control inputall" placeholder="Rent per week ($) *" name="cost" id="cost" data-ng-model="roomInfo.cost"/>
+								</div>
+								<div class="smallformarea"><button type="submit" class="btn btn-danger btnresize"><i class="glyphicon glyphicon-refresh"></i>&nbsp;&nbsp;Reset</button></div>
+								
+							</div>
+						</div>
+						
+						
+						
+						
+					</div>
+		  		</div>
+		  		
+		  
+				
+				
+				<div class="span5">
+					
+					
+				</div>
+			</div>
+		</form>
+    
+
+    </div>
+</div>
